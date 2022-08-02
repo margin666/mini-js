@@ -1,4 +1,4 @@
-import { options } from 'types/mini/index'
+
 import { App } from './index'
 import { watchEffect } from './dep'
 export function compiler(app: App<any>) {

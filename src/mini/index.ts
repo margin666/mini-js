@@ -1,5 +1,8 @@
 import {options} from 'types/mini/index'
 import {compiler} from './compiler'
+export * from './reactive'
+export * from './ref'
+export {watchEffect} from './dep'
 
 
 export class App<T>{

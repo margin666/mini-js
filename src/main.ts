@@ -1,9 +1,7 @@
-import {App} from './mini/index'
-import {ref} from './mini/ref'
-import {reactive} from './mini/reactive'
+import {App, ref, reactive} from './mini/index'
 
 const app = new App({
-    el: '#app',
+    el: '#app',// 挂载的节点
     setup(){
         const name = ref('张三')
         const list = reactive({
@@ -13,11 +11,13 @@ const app = new App({
         btn.addEventListener('click', () => {
             list.name = 12
         })
+
+        //将响应的数据return
         return {
             name,
             list
         }
     },
 })
-app.render()
+app.render()// 将插值表达式{{ ... }}替换为对应的数据
 
