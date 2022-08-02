@@ -1,19 +1,17 @@
 import {options} from 'types/mini/index'
+import {compiler} from './compiler'
 
 
-class App<T>{
+export class App<T>{
     $el: HTMLDivElement
     $data: T
     constructor(opt:options<T>){
         this.$el = document.querySelector(opt.el)! as HTMLDivElement
-        this.$data = opt.data()
+        this.$data = opt.setup()
     }
-    mount(){
-
+    render(){
+        compiler(this)
     }
 }
 
 
-export {
-    App
-}

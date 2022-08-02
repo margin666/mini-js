@@ -1,21 +1,23 @@
 import {App} from './mini/index'
+import {ref} from './mini/ref'
+import {reactive} from './mini/reactive'
 
-
-
-interface data{
-    name: string;
-}
-
-
-
-const app = new App<data>({
+const app = new App({
     el: '#app',
-    data(){
+    setup(){
+        const name = ref('张三')
+        const list = reactive({
+            name: 3
+        })
+        const btn = document.getElementById('btn')! as HTMLButtonElement
+        btn.addEventListener('click', () => {
+            list.name = 12
+        })
         return {
-            name: '张三'
+            name,
+            list
         }
     },
 })
+app.render()
 
-
-app.mount()
