@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "ES2015",
+        "sourceMap": true,
+        "noEmitOnError": true,
+        "strict": true,
+        "baseUrl": ".",
+        "paths": {
+            "types/*": ["types/*"]
+        }
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
