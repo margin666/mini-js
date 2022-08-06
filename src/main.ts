@@ -5,11 +5,13 @@ const app = new App({
     setup(){
         const name = ref('张三')
         const list = reactive({
-            name: 3
+            name: 'Tom',
+            age: 3
         })
         const btn = document.getElementById('btn')! as HTMLButtonElement
         btn.addEventListener('click', () => {
-            list.name = 12
+            list.name = 'Jerry'
+            list.age = 6
         })
 
         //将响应的数据return
