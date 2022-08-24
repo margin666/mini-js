@@ -4,10 +4,12 @@
         "module": "ES2015",
         "sourceMap": true,
         "noEmitOnError": true,
+        "esModuleInterop": true,
+        "moduleResolution":"NodeNext",
         "strict": true,
-        "baseUrl": ".",
+        "baseUrl": "./",
         "paths": {
-            "types/*": ["types/*"]
+            "types/*": ["types/*"],
         }
     },
     "exclude": [

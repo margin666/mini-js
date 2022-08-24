@@ -1,4 +1,4 @@
-import {options} from 'types/mini/index'
+import {options} from 'types/index'
 import {compiler} from './compiler'
 export * from './reactive'
 export * from './ref'
